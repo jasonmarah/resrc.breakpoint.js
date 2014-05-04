@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>ReSRC Breakpoint Advanced Example</title>
+  <style>.artdirection {width: 100%}</style>
+  <!-- 1. Load the resrc.js library -->
+  <script src="http://use.resrc.it/0.7"></script>
+  <!-- 2. Load the plugin -->
+  <script src="../src/resrc.breakpoint.js"></script>
+  <!-- 3. On DOM Ready, Execute the resrc plugin -->
+  <script>
+    resrc.ready(function () {
+      var defaults = {
+        resrcOnPinch : true,
+        pixelRounding : 1
+      };
+      resrc.options = resrc.extend(resrc.options, defaults);
+      resrc.breakpoint({breakpointClass : "artdirection", prefix : "breakpoint-src-"});
+      resrc.resrc();
+    });
+  </script>
+</head>
+<body>
+
+<!--
+We simply swap out the image at the following breakpoints:
+0px, 320px, 640px, 720px
+
+Notice how the images don't have widths!
+That's because resrc.resrc(); handles with exact sizing :)
+-->
+
+<img src=""
+     breakpoint-src-0px="http://app.resrc.it/c=ar5x10,yof0,xof46/c=ar1x1/o=80/http://www.resrc.it/img/demo/barack-obama.jpg"
+     breakpoint-src-320px="http://app.resrc.it/c=ar10x4,yof50/c=ar4x3/o=80/http://www.resrc.it/img/demo/barack-obama.jpg"
+     breakpoint-src-640px="http://app.resrc.it/c=ar10x5,yof50/c=ar4x3/o=80/http://www.resrc.it/img/demo/barack-obama.jpg"
+     breakpoint-src-720px="http://app.resrc.it/c=ar4x3/o=85/http://www.resrc.it/img/demo/barack-obama.jpg"
+     alt="" class="resrc artdirection" />
+</body>
+</html>
