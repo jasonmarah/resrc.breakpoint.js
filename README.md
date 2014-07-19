@@ -55,6 +55,10 @@ resrc.breakpoint.js is a lightweight image "art direction" plugin for use with [
 * [Basic](http://jsfiddle.net/v4s26)
 * [Advanced](http://jsfiddle.net/j5rv6)
 
+## Latest Release: 1.1.0
+
+* Added Fallback Image Support
+
 ## Building a minified release
 
 The repository does not contain a minified resrc.breakpoint.min.js file - this is only generated
