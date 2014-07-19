@@ -67,6 +67,10 @@
               elem.setAttribute("data-src", matchedEl.src);
               // Set the element src by calling the resrc.getResrcImageObject public method.
               elem.src = resrc.getResrcImageObject(elem).resrcImgPath;
+              // Fallback gracefully to the remote image if there is an error.
+              elem.onerror = function () {
+                elem.src = resrc.getResrcImageObject(elem).fallbackImgPath;
+              };
               // Remove the width and height from the element.
               elem.removeAttribute("width");
               elem.removeAttribute("height");
