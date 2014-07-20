@@ -15,6 +15,10 @@
       return obj1.width - obj2.width;
     };
 
+    var useFallbackImgPath = function () {
+      this.src = resrc.getResrcImageObject(this).fallbackImgPath;
+    };
+
     var setElementSrc = function () {
       // If an element is found.
       if (imgs) {
@@ -36,7 +40,7 @@
               sources.push(
                 { "width" : elemAttr.nodeName.replace(settings.prefix, "").replace(/\D/g, ""),
                   "unit"  : elemAttr.nodeName.replace(settings.prefix, "").replace(/[0-9]/g, ""),
-                  "src"   : elemAttr.nodeValue }
+                  "src"   : elemAttr.value }
               );
             }
           }
@@ -68,9 +72,7 @@
               // Set the element src by calling the resrc.getResrcImageObject public method.
               elem.src = resrc.getResrcImageObject(elem).resrcImgPath;
               // Fallback gracefully to the remote image if there is an error.
-              elem.onerror = function () {
-                elem.src = resrc.getResrcImageObject(elem).fallbackImgPath;
-              };
+              elem.onerror = useFallbackImgPath;
               // Remove the width and height from the element.
               elem.removeAttribute("width");
               elem.removeAttribute("height");
@@ -83,6 +85,8 @@
     // Add a resize event listener so it runs when the browser window size changes.
     if (window.addEventListener) {
       window.addEventListener("resize", setElementSrc, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onresize", setElementSrc);
     }
 
     // Execute the setElementSrc function.
