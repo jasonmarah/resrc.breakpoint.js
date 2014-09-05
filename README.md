@@ -52,8 +52,8 @@ resrc.breakpoint.js is a lightweight image "art direction" plugin for use with [
 
 ## Demos:
 
-* [Basic](http://jsfiddle.net/v4s26)
-* [Advanced](http://jsfiddle.net/j5rv6)
+* [Basic](http://jsfiddle.net/cuqsLnse)
+* [Advanced](http://jsfiddle.net/enobsrm0)
 
 ## Latest Release: 1.2.0
 
