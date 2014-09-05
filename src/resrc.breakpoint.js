@@ -92,6 +92,9 @@
     // Execute the setElementSrc function.
     setElementSrc();
 
+    // return the resrc object so the public resrc methods can be chained.
+    return resrc;
+
   };
 
   return resrc;

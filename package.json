@@ -2,7 +2,7 @@
   "name" : "resrc.breakpoint.js",
   "description" : "A lightweight image art direction plugin for use with resrc.js",
   "homepage" : "https://github.com/resrcit/resrc.breakpoint.js",
-  "version" : "1.0.0",
+  "version" : "1.2.0",
   "author" : "ReSRC (https://github.com/resrcit)",
   "license" : "MIT",
   "repository" : {

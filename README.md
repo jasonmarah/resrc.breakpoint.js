@@ -6,10 +6,10 @@ resrc.breakpoint.js is a lightweight image "art direction" plugin for use with [
 
 ## Usage
 
-1. Include [resrc.js](http://use.resrc.it/0.7):
+1. Include [resrc.js](http://use.resrc.it/0.9):
 
   ```html
-  <script src="//use.resrc.it/0.7"></script>
+  <script src="//use.resrc.it/0.9"></script>
   ```
 
 2. Include the plugin:
@@ -55,10 +55,10 @@ resrc.breakpoint.js is a lightweight image "art direction" plugin for use with [
 * [Basic](http://jsfiddle.net/v4s26)
 * [Advanced](http://jsfiddle.net/j5rv6)
 
-## Latest Release: 1.1.0
+## Latest Release: 1.2.0
 
-* Added Fallback Image Support
-* Added Cross Browser Window Resize Event
+* return the resrc object within the resrc.breakpoint public method. This is so we can chain the resrc object. For Example: resrc.configure().breakpoint().run();
+
 
 ## Building a minified release
 
