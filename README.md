@@ -57,8 +57,7 @@ resrc.breakpoint.js is a lightweight image "art direction" plugin for use with [
 
 ## Latest Release: 1.2.0
 
-* return the resrc object within the resrc.breakpoint public method. This is so we can chain the resrc object. For Example: resrc.configure().breakpoint().run();
-
+For a full list of releases and changes please see the [CHANGELOG](https://github.com/resrcit/resrc.breakpoint.js/blob/master/CHANGELOG.md).
 
 ## Building a minified release
 
@@ -66,10 +65,6 @@ The repository does not contain a minified resrc.breakpoint.min.js file - this i
 for [RELEASES](https://github.com/resrcit/resrc.breakpoint.js/releases). To build your own minified copy
 for use in development simply run ```npm install``` if you haven't already, followed by ```grunt build```.
 This will generate a resrc.breakpoint.min.js file in the `dist` subdirectory.
-
-## History
-
-For a full list of releases and changes please see the [CHANGELOG](https://github.com/resrcit/resrc.breakpoint.js/blob/master/CHANGELOG.md).
 
 ## Contributing
 
