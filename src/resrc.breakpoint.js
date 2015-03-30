@@ -19,7 +19,7 @@
       this.src = resrc.getResrcImageObject(this).fallbackImgPath;
     };
 
-    var processElements = function(elem) {
+    var processElement = function(elem) {
       // Create a sources array. This will store objects containing a width, unit and a src.
       var sources = [];
       // Create a matches array. This will store source objects matched against the matchMedia.
@@ -77,13 +77,13 @@
     var setElementSrc = function (elem) {
       // If a valid HTML element is passed to the function.
       if (elem && elem.attributes) {
-        processElements(elem);
+        processElement(elem);
       }
       // If an element is found.
       else if (imgs) {
         // Loop over each element.
         for (var k = 0; k < imgs.length; k++) {
-          processElements(imgs[k]);
+          processElement(imgs[k]);
         }
       }
     };
